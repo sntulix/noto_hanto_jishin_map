@@ -51,7 +51,7 @@ const map = new maplibregl.Map({
             minzoom: 0,
             maxzoom: 18,
             paint: {
-                'raster-opacity': 0.85
+                'raster-opacity': 0.9
             }
         },
         {
@@ -61,7 +61,7 @@ const map = new maplibregl.Map({
             minzoom: 0,
             maxzoom: 18,
             paint: {
-                'raster-opacity': 0.85
+                'raster-opacity': 0.9
             }
         },
         {
@@ -71,7 +71,7 @@ const map = new maplibregl.Map({
             minzoom: 0,
             maxzoom: 18,
             paint: {
-                'raster-opacity': 0.85
+                'raster-opacity': 0.9
             }
         }],
     },
