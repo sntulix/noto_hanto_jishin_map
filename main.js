@@ -49,21 +49,30 @@ const map = new maplibregl.Map({
             type: 'raster',
             source: '能登半島空中写真_輪島東',
             minzoom: 0,
-            maxzoom: 18
+            maxzoom: 18,
+            paint: {
+                'raster-opacity': 0.85
+            }
         },
         {
             id: '能登半島空中写真_珠洲',
             type: 'raster',
             source: '能登半島空中写真_珠洲',
             minzoom: 0,
-            maxzoom: 18
+            maxzoom: 18,
+            paint: {
+                'raster-opacity': 0.85
+            }
         },
         {
             id: '能登半島空中写真_輪島中',
             type: 'raster',
             source: '能登半島空中写真_輪島中',
             minzoom: 0,
-            maxzoom: 18
+            maxzoom: 18,
+            paint: {
+                'raster-opacity': 0.85
+            }
         }],
     },
 });
