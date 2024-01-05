@@ -49,17 +49,17 @@ map.on('load', () => {
     const gsiTerrainSource = useGsiTerrainSource(maplibregl.addProtocol);
     map.addSource('terrain', gsiTerrainSource);
 
-    map.addLayer(
-        {
-            id: 'hillshade',
-            source: 'terrain',
-            type: 'hillshade',
-            paint: {
-                'hillshade-illumination-anchor': 'map',
-                'hillshade-exaggeration': 0.2,
-            },
-        },
-    );
+    // map.addLayer(
+    //     {
+    //         id: 'hillshade',
+    //         source: 'terrain',
+    //         type: 'hillshade',
+    //         paint: {
+    //             'hillshade-illumination-anchor': 'map',
+    //             'hillshade-exaggeration': 0.2,
+    //         },
+    //     },
+    // );
 
     map.addControl(
         new maplibregl.TerrainControl({
