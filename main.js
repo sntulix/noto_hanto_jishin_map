@@ -29,6 +29,12 @@ const map = new maplibregl.Map({
                 tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_suzu_0102do/{z}/{x}/{y}.png'],
                 attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
                 maxZoom: 18
+            },
+            能登半島空中写真_輪島中: {
+                type: 'raster',
+                tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_wazimanaka_0102do/{z}/{x}/{y}.png'],
+                attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
+                maxZoom: 18
             }
         },
         layers: [{
@@ -49,6 +55,13 @@ const map = new maplibregl.Map({
             id: '能登半島空中写真_珠洲',
             type: 'raster',
             source: '能登半島空中写真_珠洲',
+            minzoom: 0,
+            maxzoom: 18
+        },
+        {
+            id: '能登半島空中写真_輪島中',
+            type: 'raster',
+            source: '能登半島空中写真_輪島中',
             minzoom: 0,
             maxzoom: 18
         }],
