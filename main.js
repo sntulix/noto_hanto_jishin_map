@@ -102,7 +102,7 @@ map.on('load', () => {
     }
 
     map.addSource('openmaptiles', {
-        url: `https://api.maptiler.com/tiles/v3/tiles.json?key=Um12UgMHb9CkdMpzMrp9`,
+        url: `https://api.maptiler.com/tiles/v3/tiles.json?key=QvF1NsfIoRW0AGE6u8j7`,
         type: 'vector',
     });
     map.addLayer(
