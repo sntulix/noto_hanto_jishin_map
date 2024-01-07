@@ -132,7 +132,7 @@ map.on('load', () => {
                     ['>=', ['get', 'zoom'], 16],
                     ['get', 'render_min_height'], 0
                 ],
-                'fill-extrusion-opacity': 0.4
+                'fill-extrusion-opacity': 1.0
             }
         },
         labelLayerId
