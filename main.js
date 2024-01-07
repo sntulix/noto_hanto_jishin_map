@@ -70,35 +70,34 @@ const map = new maplibregl.Map({
             minzoom: 0,
             maxzoom: 18
         },
-            {
-                id: '能登半島空中写真_輪島中',
-                type: 'raster',
-                source: '能登半島空中写真_輪島中',
-                minzoom: 0,
-                maxzoom: 18
-            },
-            {
-                id: '能登半島空中写真_輪島東',
-                type: 'raster',
-                source: '能登半島空中写真_輪島東',
-                minzoom: 0,
-                maxzoom: 18
-            },
-            {
-                id: '能登半島空中写真_穴水',
-                type: 'raster',
-                source: '能登半島空中写真_穴水',
-                minzoom: 0,
-                maxzoom: 18
-            },
-            {
-                id: '能登半島空中写真_七尾',
-                type: 'raster',
-                source: '能登半島空中写真_七尾',
-                minzoom: 0,
-                maxzoom: 18
-            },
-        ],
+        {
+            id: '能登半島空中写真_輪島中',
+            type: 'raster',
+            source: '能登半島空中写真_輪島中',
+            minzoom: 0,
+            maxzoom: 18
+        },
+        {
+            id: '能登半島空中写真_輪島東',
+            type: 'raster',
+            source: '能登半島空中写真_輪島東',
+            minzoom: 0,
+            maxzoom: 18
+        },
+        {
+            id: '能登半島空中写真_穴水',
+            type: 'raster',
+            source: '能登半島空中写真_穴水',
+            minzoom: 0,
+            maxzoom: 18
+        },
+        {
+            id: '能登半島空中写真_七尾',
+            type: 'raster',
+            source: '能登半島空中写真_七尾',
+            minzoom: 0,
+            maxzoom: 18
+        }],
     },
 });
 
