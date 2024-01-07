@@ -112,7 +112,7 @@ map.on('load', () => {
             'source-layer': 'building',
             'type': 'fill-extrusion',
             'minzoom': 8,
-            'maxzoom': 18,
+            'maxzoom': 17,
             'paint': {
                 'fill-extrusion-color': [
                     'interpolate',
