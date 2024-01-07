@@ -5,9 +5,9 @@ import { useGsiTerrainSource } from 'maplibre-gl-gsi-terrain';
 const map = new maplibregl.Map({
     container: 'map', // container id
     center: [137.17879056930542, 37.482912484357], // starting position
-    zoom: 13, // starting zoom
-    minZoom: 5,
-    maxZoom: 18,
+    zoom: 10, // starting zoom
+    minZoom: 8,
+    maxZoom: 22,
     maxBounds: [122,20, 154, 50],
     style: {
         version: 8,
@@ -16,40 +16,32 @@ const map = new maplibregl.Map({
                 type: 'raster',
                 tiles: ['https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png'],
                 attribution: '&copy; <a href="https://maps.gsi.go.jp/development/ichiran.html">地理院タイル</a>',
-                maxZoom: 18
             },
             能登半島空中写真_輪島東: {
                 type: 'raster',
                 tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_wazimahigashi_0102do/{z}/{x}/{y}.png'],
                 attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-                maxZoom: 18
             },
             能登半島空中写真_珠洲: {
                 type: 'raster',
                 tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_suzu_0102do/{z}/{x}/{y}.png'],
                 attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-                maxZoom: 18
             },
             能登半島空中写真_輪島中: {
                 type: 'raster',
                 tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_wazimanaka_0102do/{z}/{x}/{y}.png'],
                 attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-                maxZoom: 18
             }
         },
         layers: [{
             id: '地理院地図',
             type: 'raster',
             source: '地理院地図',
-            minzoom: 0,
-            maxzoom: 18
         },
         {
             id: '能登半島空中写真_輪島東',
             type: 'raster',
             source: '能登半島空中写真_輪島東',
-            minzoom: 0,
-            maxzoom: 18,
             paint: {
                 'raster-opacity': 0.9
             }
@@ -58,8 +50,6 @@ const map = new maplibregl.Map({
             id: '能登半島空中写真_珠洲',
             type: 'raster',
             source: '能登半島空中写真_珠洲',
-            minzoom: 0,
-            maxzoom: 18,
             paint: {
                 'raster-opacity': 0.9
             }
@@ -68,8 +58,6 @@ const map = new maplibregl.Map({
             id: '能登半島空中写真_輪島中',
             type: 'raster',
             source: '能登半島空中写真_輪島中',
-            minzoom: 0,
-            maxzoom: 18,
             paint: {
                 'raster-opacity': 0.9
             }
@@ -123,12 +111,13 @@ map.on('load', () => {
             'source': 'openmaptiles',
             'source-layer': 'building',
             'type': 'fill-extrusion',
-            'minzoom': 15,
+            'minzoom': 8,
+            'maxzoom': 18,
             'paint': {
                 'fill-extrusion-color': [
                     'interpolate',
                     ['linear'],
-                    ['get', 'render_height'], 0, 'lightgray', 200, 'royalblue', 400, 'lightblue'
+                    ['get', 'render_height'], 0, 'yellow'
                 ],
                 'fill-extrusion-height': [
                     'interpolate',
