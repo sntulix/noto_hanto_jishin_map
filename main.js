@@ -57,31 +57,49 @@ const map = new maplibregl.Map({
             id: '能登半島空中写真_珠洲_20240102',
             type: 'raster',
             source: '能登半島空中写真_珠洲_20240102',
+            paint: {
+                'raster-opacity': 0.9
+            }
         },
         {
             id: '能登半島空中写真_珠洲_20240105',
             type: 'raster',
             source: '能登半島空中写真_珠洲_20240105',
+            paint: {
+                'raster-opacity': 0.9
+            }
         },
         {
             id: '能登半島空中写真_輪島中',
             type: 'raster',
             source: '能登半島空中写真_輪島中',
+            paint: {
+                'raster-opacity': 0.9
+            }
         },
         {
             id: '能登半島空中写真_輪島東',
             type: 'raster',
             source: '能登半島空中写真_輪島東',
+            paint: {
+                'raster-opacity': 0.9
+            }
         },
         {
             id: '能登半島空中写真_穴水',
             type: 'raster',
             source: '能登半島空中写真_穴水',
+            paint: {
+                'raster-opacity': 0.9
+            }
         },
         {
             id: '能登半島空中写真_七尾',
             type: 'raster',
             source: '能登半島空中写真_七尾',
+            paint: {
+                'raster-opacity': 0.9
+            }
         }],
     },
 });
