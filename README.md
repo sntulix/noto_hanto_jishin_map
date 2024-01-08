@@ -20,7 +20,7 @@ https://www.futuregadget.com/file/noto_hanto_jishin_map3d/
   - 現場のプロがわかりやすく教える位置情報エンジニア養成講座」
     - https://www.shuwasystem.co.jp/book/9784798068923.html
   - maptiler, OpenStreetMap（建物データ）
-    - https://www.maptiler.com/
+    - https://www.maptiler.jp/
     - https://www.openstreetmap.org/
 
 ## ノート
