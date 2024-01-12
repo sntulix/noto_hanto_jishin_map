@@ -109,21 +109,9 @@ const map = new maplibregl.Map({
 map.addControl(new maplibregl.NavigationControl());
 
 map.on('load', () => {
+    /* add Terrain */
     const gsiTerrainSource = useGsiTerrainSource(maplibregl.addProtocol);
     map.addSource('terrain', gsiTerrainSource);
-
-    // map.addLayer(
-    //     {
-    //         id: 'hillshade',
-    //         source: 'terrain',
-    //         type: 'hillshade',
-    //         paint: {
-    //             'hillshade-illumination-anchor': 'map',
-    //             'hillshade-exaggeration': 0.2,
-    //         },
-    //     },
-    // );
-
     map.addControl(
         new maplibregl.TerrainControl({
             source: 'terrain',
@@ -132,7 +120,6 @@ map.on('load', () => {
     );
 
     const layers = map.getStyle().layers;
-
     let labelLayerId;
     for (let i = 0; i < layers.length; i++) {
         if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
@@ -140,6 +127,7 @@ map.on('load', () => {
             break;
         }
     }
+
 
     map.addSource('openmaptiles', {
         url: `https://api.maptiler.com/tiles/v3/tiles.json?key=QvF1NsfIoRW0AGE6u8j7`,
