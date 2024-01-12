@@ -9,6 +9,7 @@ const map = new maplibregl.Map({
     minZoom: 8,
     maxZoom: 22,
     maxBounds: [122,20, 154, 50],
+    maxPitch: 65,
     style: {
         version: 8,
         sources: {
