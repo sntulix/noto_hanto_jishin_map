@@ -35,7 +35,7 @@ const map = new maplibregl.Map({
             },
             能登半島空中写真_輪島中: {
                 type: 'raster',
-                tiles: ['https://maps.gsi.go.jp/xyz/20240102_noto_wazimanaka_0105do/{z}/{x}/{y}.png'],
+                tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_wazimanaka_0111do/{z}/{x}/{y}.png'],
                 attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
             },
             能登半島空中写真_穴水: {
