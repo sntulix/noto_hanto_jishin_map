@@ -128,7 +128,7 @@ map.on('load', () => {
         }
     }
 
-
+    /* add 3D-Buildings */
     map.addSource('openmaptiles', {
         url: `https://api.maptiler.com/tiles/v3/tiles.json?key=QvF1NsfIoRW0AGE6u8j7`,
         type: 'vector',
