@@ -12,7 +12,9 @@ https://www.futuregadget.com/file/noto_hanto_jishin_map3d/
 
 ## 利用ライブラリ・データ、参考
   - MapLibre GL JS
-    - maplibre-gl-gsi-terrain
+    - https://maplibre.org
+  - maplibre-gl-gsi-terrain
+    - https://github.com/mug-jp/maplibre-gl-gsi-terrain
   - 「珠州・輪島東フォトグラメトリ・マップ
     - https://x.com/hwtnv/status/1742437585316982928?s=20
   - 国土地理院 令和6年(2024年)能登半島地震に関する情報
