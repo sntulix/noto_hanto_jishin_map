@@ -9,6 +9,7 @@ const map = new maplibregl.Map({
     minZoom: 8,
     maxZoom: 22,
     maxBounds: [122,20, 154, 50],
+    maxPitch: 65,
     style: {
         version: 8,
         sources: {
@@ -26,7 +27,6 @@ const map = new maplibregl.Map({
                 type: 'raster',
                 tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_suzu_0102do/{z}/{x}/{y}.png'],
                 attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-                maxZoom: 18
             },
             能登半島空中写真_珠洲_20240105: {
                 type: 'raster',
@@ -53,52 +53,55 @@ const map = new maplibregl.Map({
             id: '地理院地図',
             type: 'raster',
             source: '地理院地図',
-            minzoom: 0,
-            maxzoom: 18
         },
         {
             id: '能登半島空中写真_珠洲_20240102',
             type: 'raster',
             source: '能登半島空中写真_珠洲_20240102',
-            minzoom: 0,
-            maxzoom: 18
+            paint: {
+                'raster-opacity': 0.9
+            }
         },
         {
             id: '能登半島空中写真_珠洲_20240105',
             type: 'raster',
             source: '能登半島空中写真_珠洲_20240105',
-            minzoom: 0,
-            maxzoom: 18
+            paint: {
+                'raster-opacity': 0.9
+            }
         },
-            {
-                id: '能登半島空中写真_輪島中',
-                type: 'raster',
-                source: '能登半島空中写真_輪島中',
-                minzoom: 0,
-                maxzoom: 18
-            },
-            {
-                id: '能登半島空中写真_輪島東',
-                type: 'raster',
-                source: '能登半島空中写真_輪島東',
-                minzoom: 0,
-                maxzoom: 18
-            },
-            {
-                id: '能登半島空中写真_穴水',
-                type: 'raster',
-                source: '能登半島空中写真_穴水',
-                minzoom: 0,
-                maxzoom: 18
-            },
-            {
-                id: '能登半島空中写真_七尾',
-                type: 'raster',
-                source: '能登半島空中写真_七尾',
-                minzoom: 0,
-                maxzoom: 18
-            },
-        ],
+        {
+            id: '能登半島空中写真_輪島中',
+            type: 'raster',
+            source: '能登半島空中写真_輪島中',
+            paint: {
+                'raster-opacity': 0.9
+            }
+        },
+        {
+            id: '能登半島空中写真_輪島東',
+            type: 'raster',
+            source: '能登半島空中写真_輪島東',
+            paint: {
+                'raster-opacity': 0.9
+            }
+        },
+        {
+            id: '能登半島空中写真_穴水',
+            type: 'raster',
+            source: '能登半島空中写真_穴水',
+            paint: {
+                'raster-opacity': 0.9
+            }
+        },
+        {
+            id: '能登半島空中写真_七尾',
+            type: 'raster',
+            source: '能登半島空中写真_七尾',
+            paint: {
+                'raster-opacity': 0.9
+            }
+        }],
     },
 });
 
@@ -106,21 +109,9 @@ const map = new maplibregl.Map({
 map.addControl(new maplibregl.NavigationControl());
 
 map.on('load', () => {
+    /* add Terrain */
     const gsiTerrainSource = useGsiTerrainSource(maplibregl.addProtocol);
     map.addSource('terrain', gsiTerrainSource);
-
-    // map.addLayer(
-    //     {
-    //         id: 'hillshade',
-    //         source: 'terrain',
-    //         type: 'hillshade',
-    //         paint: {
-    //             'hillshade-illumination-anchor': 'map',
-    //             'hillshade-exaggeration': 0.2,
-    //         },
-    //     },
-    // );
-
     map.addControl(
         new maplibregl.TerrainControl({
             source: 'terrain',
@@ -129,7 +120,6 @@ map.on('load', () => {
     );
 
     const layers = map.getStyle().layers;
-
     let labelLayerId;
     for (let i = 0; i < layers.length; i++) {
         if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
@@ -138,6 +128,7 @@ map.on('load', () => {
         }
     }
 
+    /* add 3D-Buildings */
     map.addSource('openmaptiles', {
         url: `https://api.maptiler.com/tiles/v3/tiles.json?key=QvF1NsfIoRW0AGE6u8j7`,
         type: 'vector',
@@ -160,10 +151,15 @@ map.on('load', () => {
                     'interpolate',
                     ['linear'],
                     ['zoom'],
-                    15,
-                    0,
-                    16,
-                    ['get', 'render_height']
+                    8, 0,
+                    9, 0,
+                    10, 0,
+                    11, 0,
+                    12, 0,
+                    13, 0,
+                    14, 0,
+                    15, 0,
+                    16, ['get', 'render_height']
                 ],
                 'fill-extrusion-base': ['case',
                     ['>=', ['get', 'zoom'], 16],
