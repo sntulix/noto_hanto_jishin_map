@@ -38,6 +38,11 @@ const map = new maplibregl.Map({
                 tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_wazimanaka_0111do/{z}/{x}/{y}.png'],
                 attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
             },
+            能登半島空中写真_輪島西: {
+                type: 'raster',
+                tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_wazimanishi_0111do/{z}/{x}/{y}.png'],
+                attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
+            },
             能登半島空中写真_穴水: {
                 type: 'raster',
                 tiles: ['https://maps.gsi.go.jp/xyz/20240102_noto_anamizu_0105do/{z}/{x}/{y}.png'],
@@ -86,6 +91,14 @@ const map = new maplibregl.Map({
                 'raster-opacity': 0.9
             }
         },
+            {
+                id: '能登半島空中写真_輪島西',
+                type: 'raster',
+                source: '能登半島空中写真_輪島西',
+                paint: {
+                    'raster-opacity': 0.9
+                }
+            },
         {
             id: '能登半島空中写真_穴水',
             type: 'raster',
