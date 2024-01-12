@@ -4,7 +4,7 @@ import { useGsiTerrainSource } from 'maplibre-gl-gsi-terrain';
 
 const map = new maplibregl.Map({
     container: 'map', // container id
-    center: [137.17879056930542, 37.482912484357], // starting position
+    center: [136.959343, 37.291262], // starting position
     zoom: 9.5, // starting zoom
     minZoom: 8,
     maxZoom: 22,
