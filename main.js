@@ -6,7 +6,7 @@ import { useGsiTerrainSource } from 'maplibre-gl-gsi-terrain';
  * 穴水地区 空中写真(2024/01/11) を透過処理するためのプロトコル
  */
 maplibregl.addProtocol('custom', async (params, callback) => {
-    const url = params.url.replace('custom://', 'http://'); // 実際のタイルURLに置き換える
+    const url = params.url.replace('custom://', 'https://'); // 実際のタイルURLに置き換える
 
     try {
         const response = await fetch(url);
