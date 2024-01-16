@@ -3,6 +3,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { useGsiTerrainSource } from 'maplibre-gl-gsi-terrain';
 import map_custom_protocol from './map_custom_protocol';
 import map_onload from './map_onload';
+import map_load_emergency_restored_section from './map_load_emergency_restored_section';
 
 /* 穴水地区 空中写真(2024/01/11) を透過処理するためのプロトコル追加 */
 map_custom_protocol(maplibregl);
@@ -141,4 +142,5 @@ map.addControl(new maplibregl.NavigationControl());
 
 map.on('load', () => {
     map_onload(maplibregl, useGsiTerrainSource, map);
+    map_load_emergency_restored_section(map);
 });
