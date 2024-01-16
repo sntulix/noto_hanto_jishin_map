@@ -21,7 +21,7 @@ export default function map_onload(maplibregl, useGsiTerrainSource, map) {
 
     /* add 3D-Buildings */
     map.addSource('openmaptiles', {
-        url: `https://api.maptiler.com/tiles/v3/tiles.json?key=EAgHbAOM5T4rbNX721Sa`,
+        url: `https://api.maptiler.com/tiles/v3/tiles.json?key=QvF1NsfIoRW0AGE6u8j7`,
         type: 'vector',
     });
     map.addLayer(
