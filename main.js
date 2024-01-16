@@ -142,3 +142,18 @@ map.addControl(new maplibregl.NavigationControl());
 map.on('load', () => {
     map_onload(maplibregl, useGsiTerrainSource, map);
 });
+
+// create the popup
+    const popup = new maplibregl.Popup({offset: 25}).setText(
+        'Construction on the Washington Monument began in 1848.'
+    );
+
+    // create DOM element for the marker
+    const el = document.createElement('div');
+    el.id = 'marker';
+
+    // create the marker
+    new maplibregl.Marker({element: el})
+        .setLngLat([136.9593, 37.2912])
+        .setPopup(popup) // sets a popup on this marker
+        .addTo(map);

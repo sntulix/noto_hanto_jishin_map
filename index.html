@@ -4,6 +4,20 @@
     <title>能登半島地震 3Dマップ（地理院タイル 2024年1月撮影）</title>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    #marker {
+        background-image: url('https://maplibre.org/maplibre-gl-js/docs/assets/washington-monument.jpg');
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .maplibregl-popup {
+        max-width: 200px;
+    }
+</style>
 </head>
 <body style="margin: 0">
 <div id="map" style="height: 100vh"></div>
