@@ -1082,6 +1082,7 @@ export default function map_load_sagyou(maplibregl, map) {
         const el = document.createElement('div');
         el.className = 'marker';
         el.style.backgroundImage = `url("${marker.properties._iconUrl}")`;
+        el.style.backgroundSize = `${marker.properties._iconSize[0]}px ${marker.properties._iconSize[1]}px`;
         el.style.width = `${marker.properties._iconSize[0]}px`;
         el.style.height = `${marker.properties._iconSize[1]}px`;
         // el.style.marginLeft = `-${marker.properties._iconAnchor[0]}px`;
