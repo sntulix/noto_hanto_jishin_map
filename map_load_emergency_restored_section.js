@@ -1,4 +1,4 @@
-export default function map_load_emergency_restored_section(map) {
+export default function map_load_emergency_restored_section(maplibregl, map) {
     map.addSource('route', {
         'type': 'geojson',
         'data': {
@@ -87830,5 +87830,26 @@ export default function map_load_emergency_restored_section(map) {
             'line-opacity': ['get', '_opacity'],
             'line-width': ['get', '_weight']
         }
+    });
+
+	map.on('mousemove', 'route', function() {
+		map.getCanvas().style.cursor = 'pointer';
+	});
+	map.on('mouseleave', 'route', function() {
+		map.getCanvas().style.cursor = '';
+	});
+
+    map.on('click', 'route', function(e) {
+            var html = "<div>" + e.features[0].properties.name + "</div>";
+            if (undefined!==e.features[0].properties.総延長) {
+                html += "<div>総延長：" + e.features[0].properties.総延長 + "</div>";
+            }
+            if (undefined!==e.features[0].properties.データ出典) {
+                html += "<div>データ出典：" + e.features[0].properties.データ出典 + "</    div>";
+            }
+            new maplibregl.Popup()
+                .setLngLat(e.lngLat) // ポップアップの位置を設定
+                .setHTML(html)
+                .addTo(map);
     });
 }

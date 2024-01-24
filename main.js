@@ -158,7 +158,7 @@ map.addControl(new maplibregl.NavigationControl());
 
 map.on('load', () => {
     map_onload(maplibregl, useGsiTerrainSource, map);
-    map_load_emergency_restored_section(map);
+    map_load_emergency_restored_section(maplibregl, map);
     map_load_recovery_point(maplibregl, map);
     map_load_sagyou(maplibregl, map);
     map_load_michinoeki(maplibregl, map);
