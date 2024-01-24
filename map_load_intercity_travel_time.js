@@ -295,7 +295,8 @@ export default function map_load_intercity_travel_time(maplibregl, map) {
 		'paint': {
 			'line-color': ['get', '_color'],
 			'line-opacity': ['get', '_opacity'],
-			'line-width': ['get', '_weight']
+			'line-width': ['get', '_weight'],
+			'line-dasharray': [2, 2] // 点線のパターン（線の長さ、間隔）
 		}
 	});
 
