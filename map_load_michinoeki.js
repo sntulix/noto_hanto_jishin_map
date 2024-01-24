@@ -131,7 +131,7 @@ export default function map_load_michinoeki(maplibregl, map) {
           "type": "Feature",
           "properties": {
             "name": "道の駅「とぎ海街道」",
-            "道の駅の状況": "営業休止中",
+            "道の駅の状況": "営業休止中<img width=\"100%\" src=\"./img/michinoeki/240119_togiumi.png\">",
             "_markerType": "Icon",
             "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/474.png",
             "_iconSize": [
@@ -181,7 +181,7 @@ export default function map_load_michinoeki(maplibregl, map) {
           "type": "Feature",
           "properties": {
             "name": "道の駅「ころ柿の里しか」",
-            "道の駅の状況": "営業休止中",
+            "道の駅の状況": "営業休止中<img width=\"100%\" src=\"./img/michinoeki/240119_korogaki_1.png\"><img width=\"100%\" src=\"./img/michinoeki/240119_korogaki_2.png\">",
             "_markerType": "Icon",
             "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/474.png",
             "_iconSize": [
@@ -281,7 +281,7 @@ export default function map_load_michinoeki(maplibregl, map) {
           "type": "Feature",
           "properties": {
             "name": "道の駅「能登食祭市場」",
-            "道の駅の状況": "営業休止中<img width=\"100%\" src=\"./img/michinoeki/240117_notoshokusai.png\">",
+            "道の駅の状況": "営業休止中<img width=\"100%\" src=\"./img/michinoeki/240119_notoshokusai.png\"><img width=\"100%\" src=\"./img/michinoeki/240117_notoshokusai.png\">",
             "_markerType": "Icon",
             "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/474.png",
             "_iconSize": [
@@ -379,7 +379,6 @@ export default function map_load_michinoeki(maplibregl, map) {
         }
       ]
     }
-
 
 	// add markers to map
     michinoeki.features.forEach((marker) => {
