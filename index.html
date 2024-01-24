@@ -8,13 +8,27 @@
     body {
         overflow: hidden;
     }
-    #usage_guide {
-        width: 500px;
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #ffffff88;
+    /* このスタイルはPCなどの大きいスクリーンのデバイスに適用されます */
+    @media (min-width: 768px) {
+        #usage_guide {
+            width: 500px;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #ffffff88;
+        }
+    }
+    /* このスタイルはスマホなどの小さいスクリーンのデバイスに適用されます */
+    @media (max-width: 767px) {
+        #usage_guide {
+            width: 390px;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #ffffff88;
+        }
     }
     .marker {
         background-repeat: no-repeat;
