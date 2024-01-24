@@ -1545,17 +1545,20 @@ export default function map_load_sagyou(maplibregl, map) {
         // el.style.marginTop = `-${marker.properties._iconAnchor[1]}px`;
 
 		// create the popup
-		var html = "";
-		if (marker.properties.啓開作業等===undefined) {
-			html = "<div>" + marker.properties.name + "</div>";
-		} else {
-			html = "<div>" + marker.properties.name + "</div>" +
-				marker.properties.啓開作業等;
-			if (marker.properties.撮影日!==undefined) {
-				html += "<div>撮影日：" + marker.properties.撮影日 + "</div>";
-			}
+		var html = "<div>" + marker.properties.name + "</div>";
+		if (marker.properties.啓開作業等!==undefined) {
+			html += "<div>啓開作業等：" + marker.properties.啓開作業等 + "</div>";
 		}
-			const popup = new maplibregl.Popup({offset: 25}).setHTML(html);
+		if (marker.properties.啓開前!==undefined) {
+			html += "<div>啓開前：" + marker.properties.啓開前 + "</div>";
+		}
+		if (marker.properties.啓開後!==undefined) {
+			html += "<div>啓開後：" + marker.properties.啓開後 + "</div>";
+		}
+		if (marker.properties.撮影日!==undefined) {
+			html += "<div>撮影日：" + marker.properties.撮影日 + "</div>";
+		}
+		const popup = new maplibregl.Popup({offset: 25}).setHTML(html);
 
 		// create the marker
 		new maplibregl.Marker({element: el})
