@@ -1544,13 +1544,23 @@ export default function map_load_sagyou(maplibregl, map) {
         // el.style.marginLeft = `-${marker.properties._iconAnchor[0]}px`;
         // el.style.marginTop = `-${marker.properties._iconAnchor[1]}px`;
 
-        el.addEventListener('click', () => {
-            window.alert(marker.properties.name);
-        });
+		// create the popup
+		var html = "";
+		if (marker.properties.啓開作業等===undefined) {
+			html = "<div>" + marker.properties.name + "</div>";
+		} else {
+			html = "<div>" + marker.properties.name + "</div>" +
+				marker.properties.啓開作業等;
+			if (marker.properties.撮影日!==undefined) {
+				html += "<div>撮影日：" + marker.properties.撮影日 + "</div>";
+			}
+		}
+			const popup = new maplibregl.Popup({offset: 25}).setHTML(html);
 
-        // add marker to map
-        new maplibregl.Marker({element: el})
-            .setLngLat(marker.geometry.coordinates)
-            .addTo(map);
+		// create the marker
+		new maplibregl.Marker({element: el})
+			.setLngLat(marker.geometry.coordinates)
+			.setPopup(popup) // sets a popup on this marker
+			.addTo(map);
     });
 }
