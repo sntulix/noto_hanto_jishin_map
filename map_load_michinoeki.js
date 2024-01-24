@@ -392,13 +392,17 @@ export default function map_load_michinoeki(maplibregl, map) {
         // el.style.marginLeft = `-${marker.properties._iconAnchor[0]}px`;
         // el.style.marginTop = `-${marker.properties._iconAnchor[1]}px`;
 
-        el.addEventListener('click', () => {
-            window.alert(marker.properties.name);
-        });
-
-        // add marker to map
-        new maplibregl.Marker({element: el})
-            .setLngLat(marker.geometry.coordinates)
-            .addTo(map);
+        // create the popup
+		var html = "<div>" + marker.properties.name + "</div>";
+		if (marker.properties.道の駅の状況!== undefined) {
+			html += "<div>道の駅の状況：" + marker.properties.道の駅の状況 + "</div>";
+		}
+		const popup = new maplibregl.Popup({offset: 25}).setHTML(html);
+	
+		// create the marker
+		new maplibregl.Marker({element: el})
+			.setLngLat(marker.geometry.coordinates)
+			.setPopup(popup) // sets a popup on this marker
+			.addTo(map);
     });
 }
