@@ -88134,7 +88134,13 @@ export default function map_load_emergency_restored_section(maplibregl, map) {
 	});
 
     map.on('click', 'route', function(e) {
-            var html = "<div>" + e.features[0].properties.name + "</div>";
+            var html = "";
+            if (undefined!==e.features[0].properties.name) {
+                html += "<div>" + e.features[0].properties.name + "</div>";
+            } else {
+                console.log("route.clilck()/e.features[0].properties.name/" + e.features[0].properties.name + "; properties:");
+                console.log(e.features[0].properties);
+            }
             if (undefined!==e.features[0].properties.総延長) {
                 html += "<div>総延長：" + e.features[0].properties.総延長 + "</div>";
             }
