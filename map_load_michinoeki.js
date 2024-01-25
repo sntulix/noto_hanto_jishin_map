@@ -131,7 +131,7 @@ export default function map_load_michinoeki(maplibregl, map) {
           "type": "Feature",
           "properties": {
             "name": "道の駅「とぎ海街道」",
-            "道の駅の状況": "営業休止中<img width=\"100%\" src=\"./img/michinoeki/240119_togiumi.png\">",
+            "道の駅の状況": "営業休止中<img width=\"100%\" src=\"./img/michinoeki/240119_togiumi.png\"><img width=\"100%\" src=\"./img/michinoeki/240120_togiumi.png\">",
             "_markerType": "Icon",
             "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/474.png",
             "_iconSize": [
@@ -306,7 +306,7 @@ export default function map_load_michinoeki(maplibregl, map) {
           "type": "Feature",
           "properties": {
             "name": "道の駅「狼煙」",
-            "道の駅の状況": "営業休止中",
+            "道の駅の状況": "営業休止中<img width=\"100%\" src=\"./img/michinoeki/240119_noroshi.png\">",
             "_markerType": "Icon",
             "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/474.png",
             "_iconSize": [
@@ -331,7 +331,7 @@ export default function map_load_michinoeki(maplibregl, map) {
           "type": "Feature",
           "properties": {
             "name": "道の駅「すずなり」",
-            "道の駅の状況": "営業休止中",
+            "道の駅の状況": "営業休止中<img width=\"100%\" src=\"./img/michinoeki/240119_suzunari_1.png\"><img width=\"100%\" src=\"./img/michinoeki/240119_suzunari_2.png\">",
             "_markerType": "Icon",
             "_iconUrl": "https://maps.gsi.go.jp/portal/sys/v4/symbols/474.png",
             "_iconSize": [
