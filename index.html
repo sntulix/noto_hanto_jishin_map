@@ -38,7 +38,11 @@
 </head>
 <body style="margin: 0">
 <div id="map" style="height: 100vh"></div>
-<img id="usage_guide" src="https://www.futuregadget.com/file/noto_hanto_jishin_map3d/usage_guide.png" alt="凡例">
+<img id="usage_guide" src="" alt="凡例">
 <script type="module" src="/main.js"></script>
+<script>
+    var today_date = new Date();
+    document.getElementById('usage_guide').src = 'https://www.futuregadget.com/file/noto_hanto_jishin_map3d/usage_guide.png?nocache=' + today_date.getFullYear().toString() + (today_date.getMonth()+1).toString() + today_date.getDate().toString();
+</script>   
 </body>
 </html>
