@@ -185,7 +185,8 @@ document.getElementById("getAddressButton")
         if (-1!=data.indexOf('muniCd')) {
             var json = JSON.parse(data);
             var miniCD_str = GSI.MUNI_ARRAY[json.results.muniCd].split(',');
-            var address = miniCD_str[1]+ miniCD_str[3] + ' ' + json.results.lv01Nm;
+            var address = miniCD_str[1]+ miniCD_str[3] + ' ' + json.results.lv01Nm
+            + "\n(緯度" + latitude.toFixed(6)  + " 経度" + longitude.toFixed(6) + ")";
             alert(address);
         } else {
             alert("住所データがない地点です");
