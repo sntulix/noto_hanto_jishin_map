@@ -182,10 +182,14 @@ document.getElementById("getAddressButton")
         return response.text();
     })
     .then(function(data){
-        var json = JSON.parse(data);
-        var miniCD_str = GSI.MUNI_ARRAY[json.results.muniCd].split(',');
-        var address = miniCD_str[1]+ miniCD_str[3] + ' ' + json.results.lv01Nm;
-        alert(address);
+        if (-1!=data.indexOf('muniCd')) {
+            var json = JSON.parse(data);
+            var miniCD_str = GSI.MUNI_ARRAY[json.results.muniCd].split(',');
+            var address = miniCD_str[1]+ miniCD_str[3] + ' ' + json.results.lv01Nm;
+            alert(address);
+        } else {
+            alert("住所データがない地点です");
+        }
     });
 }, false);
 
