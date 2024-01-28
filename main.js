@@ -165,3 +165,27 @@ map.on('load', () => {
     map_load_michinoeki(maplibregl, map);
     map_load_intercity_travel_time(maplibregl, map);
 });
+
+document.getElementById("getAddressButton")
+.addEventListener("click", function(e) {
+    // マップの中央点を取得
+    var center = map.getCenter();
+
+    // 緯度と経度を取得
+    var latitude = center.lat;
+    var longitude = center.lng;
+
+    // 緯度と経度を表示（または使用）
+    var url = "https://mreversegeocoder.gsi.go.jp/reverse-geocoder/LonLatToAddress?lat="+latitude+"&lon="+longitude;
+    fetch(url)
+    .then(function(response) {
+        return response.text();
+    })
+    .then(function(data){
+        var json = JSON.parse(data);
+        var miniCD_str = GSI.MUNI_ARRAY[json.results.muniCd].split(',');
+        var address = miniCD_str[1]+ miniCD_str[3] + ' ' + json.results.lv01Nm;
+        alert(address);
+    });
+}, false);
+
