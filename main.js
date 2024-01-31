@@ -157,6 +157,16 @@ const map = new maplibregl.Map({
 // Add zoom and rotation controls to the map.
 map.addControl(new maplibregl.NavigationControl());
 
+// Add geolocate control to the map.
+    map.addControl(
+        new maplibregl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            trackUserLocation: true
+        })
+    );
+
 map.on('load', () => {
     map_onload(maplibregl, useGsiTerrainSource, map);
     map_load_emergency_restored_section(maplibregl, map);
