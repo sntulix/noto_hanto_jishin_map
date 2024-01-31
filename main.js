@@ -204,3 +204,36 @@ document.getElementById("getAddressButton")
     });
 }, false);
 
+function moveToAddress() {
+    let geocoding_api_url = "https://msearch.gsi.go.jp/address-search/AddressSearch?q=";
+    let address = document.getElementById("geocoding_address_box").value;
+    if (""==address) {
+        alert("住所を入力してください");
+        return;
+    }
+    fetch(geocoding_api_url + address)
+        .then(function(response) {
+            return response.text();
+        })
+        .then(function(data) {
+            var json = JSON.parse(data);
+            if (0===json.length) {
+                alert("住所が見つかりませんでした");
+                return;
+            }
+            map.flyTo({
+                center: json[0].geometry.coordinates,
+                zoom: 18
+            });
+        });
+}
+document.getElementById("getGeocodingButton")
+.addEventListener("click", function(e) {
+    moveToAddress();
+}, false);
+document.getElementById("geocoding_address_box")
+.addEventListener("keypress", function(e) {
+    if (e.code==="Enter") {
+        moveToAddress();
+    }
+}, false);
