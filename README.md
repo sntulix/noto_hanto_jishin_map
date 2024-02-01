@@ -31,9 +31,8 @@ https://www.futuregadget.com/file/noto_hanto_jishin_map3d/
     - [MapLibre GL JS](https://maplibre.org)
     - [maplibre-gl-gsi-terrain（3D地形表示）](https://github.com/mug-jp/maplibre-gl-gsi-terrain)
   - [渡邉英徳 wtnv「珠州・輪島東フォトグラメトリ・マップ」](https://x.com/hwtnv/status/1742437585316982928?s=20)
-  - 国土地理院
-    - [令和6年(2024年)能登半島地震に関する情報](https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html)
-    - [「道路復旧見える化マップ」](https://www.mlit.go.jp/road/r6noto/index2.html)
+  - [国土地理院 令和6年(2024年)能登半島地震に関する情報](https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html)
+  - [国土交通省「道路復旧見える化マップ」](https://www.mlit.go.jp/road/r6noto/index2.html)
   - [国土地理院APIでお手軽ジオコーディング＆逆ジオコーディング - 芽萌丸](https://memo.appri.me/programming/gsi-geocoding-api)
   - [「現場のプロがわかりやすく教える位置情報エンジニア養成講座」 井口奏大 著](https://www.shuwasystem.co.jp/book/9784798068923.html)
   - maptiler, OpenStreetMap（建物データ）
