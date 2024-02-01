@@ -8,16 +8,17 @@
 https://www.futuregadget.com/file/noto_hanto_jishin_map3d/
 
 ## 操作方法
-  - 3D化On/Off: 右上の山アイコンをクリックでOn/Off
+  - 3D化On/Off: 右上の3D地形表示(![3D地形表示](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/63ca84d1-5b69-41bc-bfad-8e77e51554e2)
+)ボタンをクリックするとOn/Offが切り替わります。
   - 左右前後移動: マウス左ドラッグ
   - 角度変更: マウス右ドラッグ
   - ズーム変更: マウス中ホイール回転 
   - 現在地表示: 地図右の「現在地」(![現在地ボタン](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/de98409f-7ec9-4111-a494-00b393c77e42)
-)ボタン
+)ボタンを押すと、今いるところに表示が移動します。
   - 地点の住所表示：地図左下の「地点住所を表示」(![地点住所を表示ボタン](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/f31684fb-2f40-4294-911a-4ae751232657)
-)ボタン
-  - 住所から地点を表示：地図左下の「入れた住所を表示」(![入れた住所を表示ボタン](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/d770171b-f4ef-4264-b908-ecfacc88c441)
-)ボタン
+)ボタンを押すと、今見ているところの住所と緯度経度が表示されます。
+  - 住所から地点を表示：地図左下に住所を入れての「入れた住所を表示」(![入れた住所を表示ボタン](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/d770171b-f4ef-4264-b908-ecfacc88c441)
+)ボタンを押すと、その住所のところに表示が移動します。
   - アイコン写真: 工事の絵(![作業実施箇所](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/700ba8fe-f8b7-43d3-9bde-d72a9fa29254)
 )や道の駅の絵(![道の駅](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/cf8539e9-5e36-4c6d-a2e6-7bf3b801fc21)
 )をクリックすると情報や写真などが見れます。
