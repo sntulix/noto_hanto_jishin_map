@@ -12,11 +12,18 @@ https://www.futuregadget.com/file/noto_hanto_jishin_map3d/
   - 左右前後移動: マウス左ドラッグ
   - 角度変更: マウス右ドラッグ
   - ズーム変更: マウス中ホイール回転 
-  - 現在地表示: 地図右の「十字丸」(![スクリーンショット 2024-02-01 9.05.14.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fbs%2Fvw3p1nyx4jz6y2xfy3v5mkfr0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_6slz7s%2F%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-02-01%209.05.14.png))ボタン
-  - 地点の住所表示：地図左下の「地点住所を表示」(![スクリーンショット 2024-02-01 9.05.40.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fbs%2Fvw3p1nyx4jz6y2xfy3v5mkfr0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_7pWZM1%2F%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-02-01%209.05.40.png))ボタン
-  - 住所から地点を表示：地図左下の「入れた住所を表示」(![スクリーンショット 2024-02-01 9.07.07.png](..%2F..%2F..%2FDesktop%2F%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-02-01%209.07.07.png))ボタン
-  - アイコン写真: 工事の絵(![スクリーンショット 2024-02-01 9.08.49.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fbs%2Fvw3p1nyx4jz6y2xfy3v5mkfr0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_g8nr0T%2F%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-02-01%209.08.49.png))や道の駅の絵(![スクリーンショット 2024-02-01 9.09.42.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fbs%2Fvw3p1nyx4jz6y2xfy3v5mkfr0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_rWDRbM%2F%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-02-01%209.09.42.png))をクリックすると情報や写真などが見れます。
-  - 到達地点マーク: 黄色い四角(![スクリーンショット 2024-02-01 9.10.15.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fbs%2Fvw3p1nyx4jz6y2xfy3v5mkfr0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_PRjASD%2F%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-02-01%209.10.15.png))や緑色の星(![スクリーンショット 2024-02-01 9.10.58.png](..%2F..%2F..%2F..%2F..%2Fvar%2Ffolders%2Fbs%2Fvw3p1nyx4jz6y2xfy3v5mkfr0000gn%2FT%2FTemporaryItems%2FNSIRD_screencaptureui_8mzwsx%2F%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202024-02-01%209.10.58.png))をクリックすると情報や写真などが見れます。
+  - 現在地表示: 地図右の「現在地」(![現在地ボタン](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/de98409f-7ec9-4111-a494-00b393c77e42)
+)ボタン
+  - 地点の住所表示：地図左下の「地点住所を表示」(![地点住所を表示ボタン](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/f31684fb-2f40-4294-911a-4ae751232657)
+)ボタン
+  - 住所から地点を表示：地図左下の「入れた住所を表示」(![入れた住所を表示ボタン](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/d770171b-f4ef-4264-b908-ecfacc88c441)
+)ボタン
+  - アイコン写真: 工事の絵(![作業実施箇所](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/700ba8fe-f8b7-43d3-9bde-d72a9fa29254)
+)や道の駅の絵(![道の駅](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/cf8539e9-5e36-4c6d-a2e6-7bf3b801fc21)
+)をクリックすると情報や写真などが見れます。
+  - 到達地点マーク: 黄色い四角(![沿岸部への到達点](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/3fac615a-3ede-46fe-a7e5-c5874f3e0800)
+)や緑色の星(![国復旧業者作業箇所](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/d5c0c09b-4ec5-4f02-872d-dee8aa8284aa)
+)をクリックすると情報や写真などが見れます。
   - 点線: 区間ごとの所要時間です。クリックすると時間が見れます。
 
 ## 利用ライブラリ・データ、参考
