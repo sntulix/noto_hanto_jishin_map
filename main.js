@@ -227,6 +227,10 @@ function moveToAddress() {
             });
         });
 }
+document.getElementById("getHowtoButton")
+.addEventListener("click", function(e) {
+    location.href = "https://github.com/sntulix/noto_hanto_jishin_map3d";
+}, false);
 document.getElementById("getGeocodingButton")
 .addEventListener("click", function(e) {
     moveToAddress();

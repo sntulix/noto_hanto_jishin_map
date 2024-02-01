@@ -30,7 +30,7 @@
             background-color: #ffffff88;
         }
         .mapboxgl-ctrl-bottom-right {
-            bottom: 30px !important;
+            bottom: 50px !important;
         }
     }
     .marker {
@@ -41,13 +41,13 @@
     #address_form {
         position: fixed;
         left: 0;
-        bottom: 20px;
+        bottom: 27px;
         z-index: 2;
     }
     #geocoding_address_box {
         position: fixed;
         left: 0;
-        bottom: 0;
+        bottom: 5px;
         z-index: 2;
         width: 310px;
     }
@@ -57,7 +57,7 @@
 </script>
 </head>
 <body style="margin: 0">
-<div id="address_form"><input id="getAddressButton" type="button" value="地点住所を表示"><input id="getGeocodingButton" type="button" value="入れた住所を表示"></div>
+<div id="address_form"><input id="getHowtoButton" type="button" value="使い方をひらく"><input id="getAddressButton" type="button" value="地点住所を表示"><input id="getGeocodingButton" type="button" value="入れた住所を表示"></div>
 <input id="geocoding_address_box" type="input" value="" placeholder="住所を入れて右のボタンを押すとそこを表示します">
 <div id="map" style="height: 100vh"></div>
 <img id="usage_guide" src="" alt="凡例">
