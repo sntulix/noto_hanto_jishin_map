@@ -8,6 +8,7 @@ import map_load_recovery_point from './map_load_recovery_point';
 import map_load_sagyou from './map_load_sagyou';
 import map_load_michinoeki from "./map_load_michinoeki.js";
 import map_load_intercity_travel_time from "./map_load_intercity_travel_time.js";
+import municipal_road_investigation from "./municipal_road_investigation.js";
 
 /* 穴水地区 空中写真(2024/01/11) を透過処理するためのプロトコル追加 */
 map_custom_protocol(maplibregl);
@@ -174,6 +175,7 @@ map.on('load', () => {
     map_load_sagyou(maplibregl, map);
     map_load_michinoeki(maplibregl, map);
     map_load_intercity_travel_time(maplibregl, map);
+    municipal_road_investigation(maplibregl, map);
 });
 
 document.getElementById("getAddressButton")
