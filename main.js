@@ -178,6 +178,11 @@ map.on('load', () => {
     municipal_road_investigation(maplibregl, map);
 });
 
+map.addControl(new maplibregl.AttributionControl({
+    customAttribution: '<a href=\"https://www.mlit.go.jp/road/r6noto/index2.html\" target=\"_blank\">&copy; 国土交通省 令和６年能登半島地震　道路復旧見える化マップ</a>',
+    compact: true
+}));
+
 document.getElementById("getAddressButton")
 .addEventListener("click", function(e) {
     // マップの中央点を取得
