@@ -66,6 +66,6 @@ export default function map_onload(maplibregl, useGsiTerrainSource, map) {
     /* add noto airport */
     const marker = new maplibregl.Marker()
         .setLngLat([136.958982305556, 37.2927485833333])
-        .setPopup(new maplibregl.Popup().setHTML("<div><a href='https://www.flightradar24.com/data/airports/ntq' rel='noopener noreferrer' target='_blank'>能登空港フライトスケジュールを開く - flightradar24</a></div>"))
+        .setPopup(new maplibregl.Popup().setHTML("<div><a href='https://www.ana.co.jp/ja/jp/special-notice/000873.html?p1=domestic&p2=ja&p3=global' rel='noopener noreferrer' target='_blank'>令和6年能登半島地震に伴う運休および臨時便の設定について(2月7日更新） - ANA</a></div>"))
         .addTo(map);
 }
