@@ -61,4 +61,11 @@ export default function map_onload(maplibregl, useGsiTerrainSource, map) {
         },
         labelLayerId
     );
+
+
+    /* add noto airport */
+    const marker = new maplibregl.Marker()
+        .setLngLat([136.958982305556, 37.2927485833333])
+        .setPopup(new maplibregl.Popup().setHTML("<div><a href='https://www.flightradar24.com/data/airports/ntq' rel='noopener noreferrer' target='_blank'>能登空港フライトスケジュールを開く - flightradar24</a></div>"))
+        .addTo(map);
 }
