@@ -1,13 +1,15 @@
-export default function municipal_road_investigation(maplibregl, map) {
+import map_load_recovery_point from "./map_load_recovery_point.js";
+
+export default function map_load_municipal_road_investigation(maplibregl, map) {
   fetch("road/r6noto/map/json/municipal_road_investigation.geojson")
   .then(function(response) {
     return response.text();
   })
   .then(function(data){
-    const sagyou = JSON.parse(data);
+    const municipal = JSON.parse(data);
 
 	// add markers to map
-    sagyou.features.forEach((marker) => {
+    municipal.features.forEach((marker) => {
         // create a DOM element for the marker
         const el = document.createElement('div');
         el.className = 'marker';
