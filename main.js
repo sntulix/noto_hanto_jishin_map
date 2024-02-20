@@ -181,7 +181,7 @@ map.on('load', () => {
 });
 
 map.addControl(new maplibregl.AttributionControl({
-    customAttribution: '<a href=\"https://www.mlit.go.jp/road/r6noto/index2.html\" target=\"_blank\">&copy; 国土交通省 令和６年能登半島地震　道路復旧見える化マップ</a>',
+    customAttribution: '<a href=\"https://www.mlit.go.jp/road/r6noto/index2.html\" target=\"_blank\">&copy; 国土交通省 令和６年能登半島地震　道路復旧見える化マップ</a> | <a href=\"https://github.com/sntulix/noto_hanto_jishin_map3d\" target=\"_blank\">github</a>',
     compact: true
 }));
 
