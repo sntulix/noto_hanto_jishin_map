@@ -1,8 +1,9 @@
 #!/bin/sh
 
 yymmdd=`date +%y%m%d`
+userid=futuregadget
 
-cd /home/futuregadget/www/file/noto_hanto_jishin_map3d
+cd /home/${userid}/www/file/noto_hanto_jishin_map3d
 
 if ! test -d data
 then
