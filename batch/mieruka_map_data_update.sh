@@ -1,4 +1,8 @@
 #!/bin/sh
+#
+# data updater for sakura server (freebsd).
+# deploy to /home/<userid>/cron/
+#
 
 yymmdd=`date +%y%m%d`
 userid=futuregadget
