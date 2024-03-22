@@ -15,21 +15,6 @@ then
 fi
 cd data
 
-# data.zip
-# curl --fail -o data.zip https://www.mlit.go.jp/road/r6noto/data.zip
-#
-# if [ $? -eq 22 ]
-# then
-# 	rm data.zip
-# 	exit
-# fi
-#
-# if test -e data.zip
-# then
-# 	rm -rf road
-# 	cp -fpr road/r6noto/map/img ../
-# fi
-
 # daily 差分
 sabun_basename=${yymmdd}data
 zip_filename=${sabun_basename}.zip
