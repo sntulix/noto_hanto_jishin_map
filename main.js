@@ -3,13 +3,6 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { useGsiTerrainSource } from 'maplibre-gl-gsi-terrain';
 import map_custom_protocol from './map_custom_protocol';
 import map_onload from './map_onload';
-import map_load_emergency_restored_section from './map_load_emergency_restored_section';
-import map_load_recovery_point from './map_load_recovery_point';
-import map_load_sagyou from './map_load_sagyou';
-import map_load_michinoeki from "./map_load_michinoeki.js";
-import map_load_intercity_travel_time from "./map_load_intercity_travel_time.js";
-import map_load_municipal_road_investigation from "./map_load_municipal_road_investigation.js";
-import map_load_before_after from './map_load_before_after';
 
 /* 穴水地区 空中写真(2024/01/11) を透過処理するためのプロトコル追加 */
 map_custom_protocol(maplibregl);
@@ -30,51 +23,11 @@ const map = new maplibregl.Map({
                 tiles: ['https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png'],
                 attribution: '&copy; <a href="https://maps.gsi.go.jp/development/ichiran.html">地理院タイル</a>',
             },
-            能登半島空中写真_輪島東: {
+            能登半島空中写真_全ソースマージ_20240117: {
                 type: 'raster',
-                tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_wazimahigashi_0102do/{z}/{x}/{y}.png'],
+                tiles: ['custom://map_custom_protocol_js/{z}/{x}/{y}.png'],
                 attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
             },
-            能登半島空中写真_珠洲_20240102: {
-                type: 'raster',
-                tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_suzu_0102do/{z}/{x}/{y}.png'],
-                attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-            },
-            能登半島空中写真_珠洲_20240105: {
-                type: 'raster',
-                tiles: ['https://maps.gsi.go.jp/xyz/20240102_noto_suzu_0105do/{z}/{x}/{y}.png'],
-                attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-            },
-            能登半島空中写真_輪島中: {
-                type: 'raster',
-                tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_wazimanaka_0111do/{z}/{x}/{y}.png'],
-                attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-            },
-            能登半島空中写真_輪島西_20240111: {
-                type: 'raster',
-                tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_wazimanishi_0111do/{z}/{x}/{y}.png'],
-                attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-            },
-            能登半島空中写真_輪島西_20240117: {
-                type: 'raster',
-                tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_wazimanishi_0117do/{z}/{x}/{y}.png'],
-                attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-            },
-            能登半島空中写真_穴水_20240117: {
-                type: 'raster',
-                tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_anamizu_0117do/{z}/{x}/{y}.png'],
-                attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-            },
-            能登半島空中写真_七尾_20240105: {
-                type: 'raster',
-                tiles: ['https://maps.gsi.go.jp/xyz/20240102_noto_nanao_0105do/{z}/{x}/{y}.png'],
-                attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-            },
-            能登半島空中写真_七尾_20240117: {
-                type: 'raster',
-                tiles: ['https://maps.gsi.go.jp/xyz/20240102noto_nanao_0117do/{z}/{x}/{y}.png'],
-                attribution: '&copy; <a href="https://www.gsi.go.jp/BOUSAI/20240101_noto_earthquake.html?fbclid=IwAR2g3dvoK3GeS33I3X4F_W5REdGVFEWkLjOt3_cODQot5X4iUO_mmzxcFm8#2">地理院タイル 令和6年(2024年)能登半島地震に関する情報</a>',
-            }
         },
         layers: [{
             id: '地理院地図',
@@ -82,73 +35,9 @@ const map = new maplibregl.Map({
             source: '地理院地図',
         },
         {
-            id: '能登半島空中写真_珠洲_20240102',
+            id: '能登半島空中写真_全ソースマージ_20240117',
             type: 'raster',
-            source: '能登半島空中写真_珠洲_20240102',
-            paint: {
-                'raster-opacity': 0.9
-            }
-        },
-        {
-            id: '能登半島空中写真_珠洲_20240105',
-            type: 'raster',
-            source: '能登半島空中写真_珠洲_20240105',
-            paint: {
-                'raster-opacity': 0.9
-            }
-        },
-        {
-            id: '能登半島空中写真_輪島中',
-            type: 'raster',
-            source: '能登半島空中写真_輪島中',
-            paint: {
-                'raster-opacity': 0.9
-            }
-        },
-        {
-            id: '能登半島空中写真_輪島東',
-            type: 'raster',
-            source: '能登半島空中写真_輪島東',
-            paint: {
-                'raster-opacity': 0.9
-            }
-        },
-        {
-            id: '能登半島空中写真_輪島西_20240111',
-            type: 'raster',
-            source: '能登半島空中写真_輪島西_20240111',
-            paint: {
-                'raster-opacity': 0.9
-            }
-        },
-        {
-            id: '能登半島空中写真_輪島西_20240117',
-            type: 'raster',
-            source: '能登半島空中写真_輪島西_20240117',
-            paint: {
-                'raster-opacity': 0.9
-            }
-        },
-        {
-            id: '能登半島空中写真_穴水_20240117',
-            type: 'raster',
-            source: '能登半島空中写真_穴水_20240117',
-            paint: {
-                'raster-opacity': 0.9
-            }
-        },
-        {
-            id: '能登半島空中写真_七尾_20240105',
-            type: 'raster',
-            source: '能登半島空中写真_七尾_20240105',
-            paint: {
-                'raster-opacity': 0.9
-            }
-        },
-        {
-            id: '能登半島空中写真_七尾_20240117',
-            type: 'raster',
-            source: '能登半島空中写真_七尾_20240117',
+            source: '能登半島空中写真_全ソースマージ_20240117',
             paint: {
                 'raster-opacity': 0.9
             }
