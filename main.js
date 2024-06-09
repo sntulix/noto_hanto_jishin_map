@@ -3,6 +3,13 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { useGsiTerrainSource } from 'maplibre-gl-gsi-terrain';
 import map_custom_protocol from './map_custom_protocol';
 import map_onload from './map_onload';
+import map_load_emergency_restored_section from './map_load_emergency_restored_section';
+import map_load_recovery_point from './map_load_recovery_point';
+import map_load_sagyou from './map_load_sagyou';
+import map_load_michinoeki from "./map_load_michinoeki.js";
+import map_load_intercity_travel_time from "./map_load_intercity_travel_time.js";
+import map_load_municipal_road_investigation from "./map_load_municipal_road_investigation.js";
+import map_load_before_after from './map_load_before_after';
 
 /* 穴水地区 空中写真(2024/01/11) を透過処理するためのプロトコル追加 */
 map_custom_protocol(maplibregl);
