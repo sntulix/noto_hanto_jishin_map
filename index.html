@@ -60,11 +60,12 @@
 </script>
 </head>
 <body style="margin: 0">
+<script type="module" src="/tile_baseurl_table.js"></script>
 <div id="address_form"><input id="getHowtoButton" type="button" value="使い方をひらく"><input id="getAddressButton" type="button" value="地点住所を表示"><input id="getGeocodingButton" type="button" value="入れた住所を表示"></div>
 <input id="geocoding_address_box" type="input" value="" placeholder="住所を入れて右のボタンを押すとそこを表示します">
 <div id="map" style="height: 100vh"></div>
 <img id="usage_guide" src="" alt="凡例">
-<script type="module" src="/main.js"></script>
+<script type="module" src="/main.js" defer></script>
 <script>
     var today_date = new Date();
     document.getElementById('usage_guide').src = 'https://www.futuregadget.com/file/noto_hanto_jishin_map3d/usage_guide.png?nocache=' + today_date.getFullYear().toString() + (today_date.getMonth()+1).toString() + today_date.getDate().toString();
