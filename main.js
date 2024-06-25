@@ -19,7 +19,7 @@ const map = new maplibregl.Map({
     center: [136.959343, 37.291262], // starting position
     zoom: 9.5, // starting zoom
     minZoom: 8,
-    maxZoom: 22,
+    maxZoom: 15,
     maxBounds: [122,20, 154, 50],
     maxPitch: 65,
     style: {
@@ -45,6 +45,7 @@ const map = new maplibregl.Map({
             id: '能登半島空中写真_全ソースマージ_20240117',
             type: 'raster',
             source: '能登半島空中写真_全ソースマージ_20240117',
+            maxZoom:15,
             paint: {
                 'raster-opacity': 0.9
             }
