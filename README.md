@@ -7,6 +7,11 @@
 
 https://www.futuregadget.com/file/noto_hanto_jishin_map3d/
 
+## スクリーンショット
+
+![447989355_7652570874818543_4245890940101942119_n](https://github.com/user-attachments/assets/376de9e7-c714-42d8-88b1-bfaadaa98f31)
+※プライバシーのため、現在は建物表示は停止しています。
+
 ## 操作方法
   - 3D化On/Off: 右上の3D地形表示(![3D地形表示](https://github.com/sntulix/noto_hanto_jishin_map3d/assets/616940/63ca84d1-5b69-41bc-bfad-8e77e51554e2)
 )ボタンをクリックするとOn/Offが切り替わります。
